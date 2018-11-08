@@ -1,0 +1,18 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.axis{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.title{
+    font-size: 20px;
+}
+
+form {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
