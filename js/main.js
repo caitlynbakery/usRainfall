@@ -113,13 +113,21 @@ function drawRain(selection, datasets){
         .data(dataset);
     circles.exit().remove();
     circles
-        .attr('cy', d => yScale(d.rainfall));
+        .attr('cy', '0')
+        .transition()
+        .attr('cy', d => yScale(d.rainfall))
+        .duration(1000);
+
     circles.enter()
         .append('circle')
-        .attr('cy', d => yScale(d.rainfall))
+        .attr('cy', '0')
         .attr('cx', d => xScale(d.state) + xScale.bandwidth()/2)
         .attr('r', xScale.bandwidth()/2)
-        .style('fill', (d, i) => d3.schemeSet3[i]);
+        .style('fill', (d, i) => d3.schemeSet3[i])
+        .transition()
+        .attr('cy', d => yScale(d.rainfall))
+        .duration(1000)
+
 
 
 }
